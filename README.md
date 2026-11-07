@@ -1,2 +1,4 @@
 # Deliverable_Inclusive-Form-Flow
 
+**Purpose:**
+-The purpose of this form is to work as a application to become a member for the website organization. A member can be a writer, researcher, or both. The target audience of this form is for subscribers or those interested in the websites topics, can apply to be a part of the team. The form collects contact information (name, phone number, and email address), the applicants preferred position as a member, and two optional fields (a section to briefly express why they are interested in becoming a member and another field asking where they heard of the organization). After submitting, their information would be set via a URL to to organization. 
