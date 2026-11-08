@@ -52,8 +52,8 @@
                         <td>The type is set to "text".</td>
                         <td>name/value</td>
                         <td>name</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>None</td>
+                        <td>Collecting a first and last name is considered general information and does not require encrypting.</td>
                     </tr>
                     <tr>
                         <td>Phone Number *</td>
@@ -62,8 +62,8 @@
                         <td>Type is set to "tel" for telephone.</td>
                         <td>phone/value</td>
                         <td>tel</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>None</td>
+                        <td>A phone number is considered general information and does not require additional encryption.</td>
                     </tr>
                     <tr>
                         <td>Email Address *</td>
@@ -72,18 +72,21 @@
                         <td>Type is set to "email", which requires an input that follows proper email formatting.</td>
                         <td>email/value</td>
                         <td>email</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>None</td>
+                        <td>An email is considered general information and does not require additional encryption.</td>
                     </tr>
                     <tr>
                         <td>Preferred Position *</td>
                         <td>The position preference fieldset is a required field needed to determine which position the applicant is applying for.</td>
                         <td>Yes</td>
-                        <td>position-preference</td>
-                        <td>Replace</td>
+                        <td>Type for each potential selection is "radio".</td>
+                        <td>
+                            The name is preferred-position for each options.
+                            Potential value include "Writing", "Researching", or "Both".
+                        </td>
                         <td>N/A</td>
                         <td>Each radio button input shares the same name to limit one selection at a time.</td>
-                        <td>Replace</td>
+                        <td>The preferred position selection is not confidential and does not require additional encryption.</td>
                     </tr>
                     <tr>
                         <td>Tell us about yourself (Optional)</td>
@@ -93,7 +96,7 @@
                         <td>about-you/value</td>
                         <td>off</td>
                         <td>The constraint of maxlength is set to 300 to limit the amount of characters used in the input.</td>
-                        <td>Replace</td>
+                        <td>This is an optional field that provides only surface level information. The top of the form informs the user to not provide any confidential information.</td>
                     </tr>
                     <tr>
                         <td>Where did you hear about us? (Optional)</td>
@@ -103,7 +106,7 @@
                         <td>discovery/value</td>
                         <td>off</td>
                         <td>The constraint of maxlength is set to 30 to limit the amount of characters used in the input.</td>
-                        <td>Replace</td>
+                        <td>This information is only of value to a marketing strategy and is not confidential.</td>
                     </tr>
                 </tbody>
             </table>
