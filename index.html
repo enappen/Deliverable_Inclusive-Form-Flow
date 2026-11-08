@@ -36,13 +36,11 @@
           </p>
           <div class="field">
             <label for="name">Name *</label>
-            <input id="name" name="name" type="text" autocomplete="name" />
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe"/>
           </div>
           <div class="field">
-            <label for="phone"
-              >Phone Number *
-              <input id="phone" name="phone" type="tel" autocomplete="tel" />
-            </label>
+            <label for="phone">Phone Number *</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890"/>
           </div>
           <div class="field">
             <label for="email">Email address *</label>
@@ -51,6 +49,7 @@
               name="email"
               type="email"
               autocomplete="email"
+              placeholder="jdoe@email.com"
               required
             />
           </div>
@@ -102,14 +101,15 @@
         </div>
         <div class="field">
           <label for="discovery"
-            >Where did you hear about us? (Optional)
-            <input
-              type="text"
-              name="discovery"
-              autocomplete="off"
-              ="Social Media"
-            />
-          </label>
+            >Where did you hear about us? (Optional)</label>
+          <input
+            type="text"
+            name="discovery"
+            id="discovery"
+            autocomplete="off"
+            maxlength="30"
+            placeholder="EX: Social Media"
+          />
         </div>
         <button type="submit">Submit</button>
       </form>

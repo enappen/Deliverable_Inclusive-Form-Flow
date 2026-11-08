@@ -109,6 +109,10 @@ button:disabled{
     opacity:.55;
     cursor:not-allowed;
 }
+
+#discovery {
+    width: 34ch;
+}
 @media (min-width:48rem){
     .paired-fields{
         display:grid;

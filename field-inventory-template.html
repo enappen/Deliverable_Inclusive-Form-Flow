@@ -46,13 +46,63 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
+                        <td>Name *</td>
+                        <td>The name input is a required field needed for identifying the applicant.</td>
+                        <td>Yes</td>
+                        <td>The type is set to "text".</td>
+                        <td>name/value</td>
+                        <td>name</td>
                         <td>Replace or none</td>
+                        <td>Replace</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number *</td>
+                        <td>The phone input is a required field needed for a contact method.</td>
+                        <td>Yes</td>
+                        <td>Type is set to "tel" for telephone.</td>
+                        <td>phone/value</td>
+                        <td>tel</td>
+                        <td>Replace or none</td>
+                        <td>Replace</td>
+                    </tr>
+                    <tr>
+                        <td>Email Address *</td>
+                        <td>The email input is a required field needed as a secondary contact method.</td>
+                        <td>Yes</td>
+                        <td>Type is set to "email", which requires an input that follows proper email formatting.</td>
+                        <td>email/value</td>
+                        <td>email</td>
+                        <td>Replace or none</td>
+                        <td>Replace</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred Position *</td>
+                        <td>The position preference fieldset is a required field needed to determine which position the applicant is applying for.</td>
+                        <td>Yes</td>
+                        <td>position-preference</td>
+                        <td>Replace</td>
+                        <td>N/A</td>
+                        <td>Each radio button input shares the same name to limit one selection at a time.</td>
+                        <td>Replace</td>
+                    </tr>
+                    <tr>
+                        <td>Tell us about yourself (Optional)</td>
+                        <td>The input named "about-you" is an optional field that allows the applicant to express their interest in becoming a member.</td>
+                        <td>No</td>
+                        <td>The type is textarea.</td>
+                        <td>about-you/value</td>
+                        <td>off</td>
+                        <td>The constraint of maxlength is set to 300 to limit the amount of characters used in the input.</td>
+                        <td>Replace</td>
+                    </tr>
+                    <tr>
+                        <td>Where did you hear about us? (Optional)</td>
+                        <td>The input named "discovery" is an optional field where the user can provide meaningful data that the organization can use to keep track of where users discovered the website.</td>
+                        <td>No</td>
+                        <td>Type is set to text.</td>
+                        <td>discovery/value</td>
+                        <td>off</td>
+                        <td>The constraint of maxlength is set to 30 to limit the amount of characters used in the input.</td>
                         <td>Replace</td>
                     </tr>
                 </tbody>
