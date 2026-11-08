@@ -11,20 +11,20 @@
       <p class="eyebrow">Application</p>
       <h1>Become a Member</h1>
       <p class="lede">
-        Join our organization as a writer,
-        researcher, or both! Member contribute to our organization by
-        researching and writing topics our subscribers crave and keep them
-        informed. The application takes approximately 3-5 minutes. Upon
-        submission, your application will be reviewed by our team lead who will
-        respond in 5-7 business days.
+        Join our organization as a writer, researcher, or both! Member
+        contribute to our organization by researching and writing topics our
+        subscribers crave and keep them informed. The application takes
+        approximately 3-5 minutes. Upon submission, your application will be
+        reviewed by our team lead who will respond in 5-7 business days.
       </p>
     </header>
     <main>
       <section id="expectations">
         <h2>F1 · Purpose and Expectations</h2>
         <p>
-          State the required/optional convention and a concise privacy notice.
-          Use fictional test data only.
+          Please do not enter any confidential information. Information received
+          will not be sold or sent to a third party. <br />
+          Sections with (*) are required to complete.
         </p>
       </section>
       <form action="" method="get">
@@ -57,42 +57,59 @@
         </fieldset>
         <fieldset>
           <legend>F3 · Preferred position: *</legend>
-          <p class="help">
-            Use an appropriate radio, checkbox, or select structure for the
-            task.
-          </p>
+          <p class="help">Please select one option.</p>
           <label class="choice">
-            <input type="radio" name="position_preference" value="writing" />
+            <input
+              type="radio"
+              id="writing"
+              name="position-preference"
+              value="writing"
+            />
             Writing</label
           >
           <label class="choice"
             ><input
               type="radio"
-              name="position_preference"
+              id="researching"
+              name="position-preference"
               value="researching"
             />
             Researching</label
           >
           <label class="choice"
-            ><input type="radio" name="position_preference" value="both" />
+            ><input
+              type="radio"
+              id="both"
+              name="position-preference"
+              value="both"
+            />
             Both</label
           >
         </fieldset>
         <div class="field">
-          <label for="details">Tell us about yourself (Optional)</label>
-          <p class="help" id="details-help">
-            Provide a brief explanation on why you want to be a member.
+          <label for="about-you">Tell us about yourself (Optional)</label>
+          <p class="help" id="about-you-help">
+            Provide a brief explanation on why you want to be a member. (300
+            characters max)
           </p>
           <textarea
-            id="details"
-            name="details"
-            aria-describedby="details-help"
+            id="about-you"
+            name="about-you"
+            aria-describedby="about-you-help"
+            maxlength="300"
+            autocomplete="off"
           ></textarea>
         </div>
         <div class="field">
-            <label for="discovery">Where did you hear about us? (Optional)
-                <input type="text" name="discovery"/>
-            </label>
+          <label for="discovery"
+            >Where did you hear about us? (Optional)
+            <input
+              type="text"
+              name="discovery"
+              autocomplete="off"
+              ="Social Media"
+            />
+          </label>
         </div>
         <button type="submit">Submit</button>
       </form>
