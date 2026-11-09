@@ -56,6 +56,7 @@
           <div class="field">
             <label for="time">Preferred time to be contacted *</label>
             <select id="time" name="time" required>
+              <option value="" disabled selected>Select an option</option>
               <option value="morning">Morning</option>
               <option value="afternoon">Afternoon</option>
               <option value="evening">Evening</option>
@@ -64,8 +65,8 @@
           <div class="field">
             <label for="preferred-contact">Preferred Method of Contact *</label>
             <p class="help">Please select one option.</p>
-            <label><input id="phone" name="preferred-contact" type="radio" value="phone" checked/> Phone</label>
-            <label><input id="email" name="preferred-contact" type="radio" value="email"/> Email</label>
+            <label><input id="prefer-phone" name="preferred-contact" type="radio" value="phone" checked/> Phone</label>
+            <label><input id="prefer-email" name="preferred-contact" type="radio" value="email"/> Email</label>
           </div>
         </fieldset>
         <fieldset>
@@ -223,7 +224,7 @@
                 <tr>
                   <td>Disabled</td>
                   <td>Elements that cannot be interacted with</td>
-                  <td>Opacity is set to 75% and the cursor is unable to interact with the element.</td>
+                  <td>Button opacity is set to 75%, input background color is changed to a gray color, and the cursor is unable to interact with the element.</td>
                 </tr>
               </tbody>
             </table>

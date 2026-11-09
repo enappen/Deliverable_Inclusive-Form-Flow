@@ -50,7 +50,7 @@
     - The text type input was selected for name to allow to user to enter their name.
     - The tel type input is used to accept an input for a phone number.
     - The email type input is used to accept a written entry that follows the proper email format.
-    - The input with elements select and option are used to provide a familiar user interface used when selecting timeframes and present the only 3 possible options. No default or placeholder option is available because it is a required field, so one option must be chosen.
+    - The input with elements select and option are used to provide a familiar user interface used when selecting timeframes and present the only 3 possible options and 1 default disabled option. The default disabled options saying "Select an option" prompts the user to select an option. If a new option is not chosen after interacting, it'll turn from gray to red. If an option is selected it'll turn green. 
     - The radio type input for preferred contact method uses radio button that hold the same name to require one selection at a time. The first option (phone) is selected by default. The other possible option is email; both options reflect the two required contact methods above. 
     - The radio type input for preferred position is used for each option to ensure the answer meets one of the 3 potential type selections: writing, researching, or both. Using this method has the benefit of forcing only one radio button be selected at a time using the checked and required attributes, as well as giving each radio button the same name.
     - The text area type for the input named "about-me" allows for a custom text response with a 300 character limit. 
@@ -76,15 +76,12 @@
     
   
 ## States and Recovery:  
-    - Default is set to background color inherit. Visible focus indicators use the same color and format as previous themes, but the color was slightly darkened to help improve contrast for accessibility. Input required is set to inherit background color as required elements are already accentuated with an asterisk (*) as mentioned in the legend and a heavier border and different color would result in over-styling. User-valid is used to maintain default colors until after the user interacts with the input. When the user does the background turn into a soft pastel green color. Meanwhile, user-invalid makes the background color turn light red after interacting and providing an invalid input. Disabled elements are given a 75% opacity to meet contrast accessibility requirements and provide a muted tone of the button indicating its inability to be used. 
-    
-    static server-returned error states [TODO]
+    - Default is set to background color inherit. Visible focus indicators use the same color and format as previous themes, but the color was slightly darkened to help improve contrast for accessibility. Input required is set to inherit background color as required elements are already accentuated with an asterisk (*) as mentioned in the legend and a heavier border and different color would result in over-styling. User-valid is used to maintain default colors until after the user interacts with the input. When the user does the background turn into a soft pastel green color. Meanwhile, user-invalid makes the background color turn light red after interacting and providing an invalid input. Disabled elements are given a 75% opacity to meet contrast accessibility requirements and provide a muted tone of the button indicating its inability to be used and the cursor is not allowed to interact with the element. For Server-returned error please see example in section F5 on index.html. 
 
     - Errors produce a light red background color on a field after an incorrect formatted answer or no answer is provided after user interaction to indicate error. Text is also populated next to the form provided information on how to fix the issue depending on the error, and entities are preserved as the document will not fully submit without meeting form requirements. Not submitting prevents the previously entered inputs from resetting.
   
 ## System and Evidence:  
-    - Extended System:  (theme, tokens, responsive layout)
-    - Test Record:
+    - Extended System:  (theme, tokens, responsive layout) have been applied in styles.css
+    - Test Record: See index.html at section F6.
     - <a href="field-inventory-template.html">Fictional Test-Data List</a>
     - AI Disclosure: No AI was used in this project.  
-    - Test Record:  
