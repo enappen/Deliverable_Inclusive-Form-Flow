@@ -70,10 +70,9 @@
 
   
 ## Requirements and Validation:  
-    - Explain how requirements are stated before entry
-    - native constraints (not submitting invalid inputs)
-    - helpful format examples (placeholders)
-    - no rigid unnecessary patterns
+    - The first section of the form informs the applicant that questions with a (*) are required to be completed. For additional clarity, "(Optional)" is added to all optional questions.
+    - native constraints (not submitting invalid inputs) Native constraints are applied to email due to its assigned type (email) requiring a proper email format be used. 
+    - Helpful format examples are visible via placeholders in the fields name (Jane Doe), phone number (123-456-7890), and where did you hear about us (EX: Social Media). No placeholder is provided in tell us about yourself because the help provided already explains what the entry should be if optionally provided. 
   
 ## States and Recovery:  
     - default, focus, required, valid, invalid, disabled,   and static server-returned error states
