@@ -71,12 +71,16 @@
   
 ## Requirements and Validation:  
     - The first section of the form informs the applicant that questions with a (*) are required to be completed. For additional clarity, "(Optional)" is added to all optional questions.
-    - native constraints (not submitting invalid inputs) Native constraints are applied to email due to its assigned type (email) requiring a proper email format be used. 
+    - Native constraints are applied to email due to its assigned type (email) requiring a proper email format be used. 
     - Helpful format examples are visible via placeholders in the fields name (Jane Doe), phone number (123-456-7890), and where did you hear about us (EX: Social Media). No placeholder is provided in tell us about yourself because the help provided already explains what the entry should be if optionally provided. 
+    
   
 ## States and Recovery:  
-    - default, focus, required, valid, invalid, disabled,   and static server-returned error states
-    - Errors use text plus another cue, preserve entries (red outline for invalid; green for valid), preserve entries, identify the field, and explain recovery.
+    - Default is set to background color inherit. Visible focus indicators use the same color and format as previous themes, but the color was slightly darkened to help improve contrast for accessibility. Input required is set to inherit background color as required elements are already accentuated with an asterisk (*) as mentioned in the legend and a heavier border and different color would result in over-styling. User-valid is used to maintain default colors until after the user interacts with the input. When the user does the background turn into a soft pastel green color. Meanwhile, user-invalid makes the background color turn light red after interacting and providing an invalid input. Disabled elements are given a 75% opacity to meet contrast accessibility requirements and provide a muted tone of the button indicating its inability to be used. 
+    
+    static server-returned error states [TODO]
+
+    - Errors produce a light red background color on a field after an incorrect formatted answer or no answer is provided after user interaction to indicate error. Text is also populated next to the form provided information on how to fix the issue depending on the error, and entities are preserved as the document will not fully submit without meeting form requirements. Not submitting prevents the previously entered inputs from resetting.
   
 ## System and Evidence:  
     - Extended System:  (theme, tokens, responsive layout)

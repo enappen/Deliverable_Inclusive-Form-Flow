@@ -40,7 +40,7 @@
           </div>
           <div class="field">
             <label for="phone">Phone Number *</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890"/>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" required/>
           </div>
           <div class="field">
             <label for="email">Email address *</label>
@@ -135,6 +135,37 @@
           static server-returned error. Keep this section separate from the
           primary blank form when necessary to avoid misleading users.
         </p>
+        <div class="state-summary">
+          <h3>Appearance for an input at default:</h3>
+          <p>Default is set to background color inherit.</p>
+          <label for="default-example">Example Input: <input type="text" id="default-example" style="background-color: #faf9f5;"></label>
+        </div>
+        <div class="state-summary">
+          <h3>Appearance for an input at focus:</h3>
+          <p>Visible focus indicators use the same color and format as previous themes, but the color was slightly darkened to help improve contrast for accessibility.</p>
+          <label for="focus-example">Example Input: <input type="text" id="focus-example" style="outline: .2rem solid #81af78; outline-offset: .2rem;"></label>
+        </div>
+        <div class="state-summary">
+          <h3>Appearance for an input that is required:</h3>
+          <p>Input required is set to inherit background color as required elements are already accentuated with an asterisk (*) as mentioned in the legend and a heavier border and different color would result in over-styling.</p>
+          <label for="required-example">Example Input: *<input type="text" id="required-example"></label>
+        </div>
+        <div class="state-summary">
+          <h3>Appearance for an input that is valid:</h3>
+          <p>User-valid is used to maintain default colors until after the user interacts with the input. When the user does the background turn into a soft pastel green color.</p>
+          <label for="valid-example">Example Input: <input type="text" id="valid-example" style="background-color: #d9e9e0fd;"></label>
+        </div>
+        <div class="state-summary">
+          <h3>Appearance for an input that is invalid:</h3>
+          <p>User-invalid makes the background color turn light red after interacting and providing an invalid input. After submission a text bubble will appear next to the top input that has an error explaining how to fix it.</p>
+          <label for="invalid-example">Example Input: <input type="text" id="invalid-example" style="background-color: #eeb9ba;"></label>
+        </div>
+        <div class="state-summary">
+          <h3>Appearance for an elements that are disabled:</h3>
+          <p>Disabled elements are given a 75% opacity to meet contrast accessibility requirements and provide a muted tone of the button indicating its inability to be used and the cursor is not allowed to interact with the element.</p>
+          <label for="disabled-example">Example Input: <input type="text" id="disabled-example" disabled></label>
+          <button type="button" style="margin-top: 1rem;" disabled>Disabled example</button>
+        </div>
         <div class="error-summary">
           <h3>There is a problem with the fictional submission</h3>
           <p><a href="#error-example">Email address needs attention</a></p>
@@ -153,7 +184,6 @@
             name@example.com.
           </p>
         </div>
-        <button type="button" disabled>Disabled example</button>
       </section>
       <section id="documentation">
         <h2>F2 and F6 · Planning and Evidence</h2>
@@ -161,9 +191,129 @@
           Link your field inventory, state matrix, fictional test-data list,
           completed test record, and AI disclosure.
         </p>
-        <p>
-          <a href="field-inventory-template.html">Fictional Test-Data List</a>
-        </p>
+        <h3>Fictional Test-Data List: </h3>
+        <p><a href="field-inventory-template.html">See Table List</a></p>
+
+        <h3>State Matrix</h3>
+          <div class="table-region">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">State</th>
+                  <th scope="col">User must perceive</th>
+                  <th scope="col">Implementation concern</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Default</td>
+                  <td>The control boundary is for the background color which is set to inherit. The default pseudo-selector is used for input, the preferred time ID, textarea, and required. The default setting also applies to optional and required fields ensuring everything starts with the same appearance.</td>
+                  <td>Even though the preferred time section doesn't have a default selection option, it will still turn green after the user interacts. This way, a valid input is always selected but the user is visually informed on inputs they have completed successfully.</td>
+                </tr>
+                <tr>
+                  <td>Focus</td>
+                  <td>Current Keyboard Location</td>
+                  <td>A visible focus indicator was used with an outline that has a contrasting color theme (--color-border/##81af78) and a small offset.</td>
+                </tr>
+                <tr>
+                  <td>Invalid/Error</td>
+                  <td>Where the error occurred in the form, why, and how to fix it.</td>
+                  <td>A light red background will fill the invalid input and a text bubble below will provide context on how to fix the error based on its declared type.</td>
+                </tr>
+                <tr>
+                  <td>Disabled</td>
+                  <td>Elements that cannot be interacted with</td>
+                  <td>Opacity is set to 75% and the cursor is unable to interact with the element.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        <h3>Fictional Test-Data List</h3>
+
+        <h3>Test Record</h3>
+          <ul> 
+            <li>
+              <p>HTML Validation</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>CSS Validation</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Keyboard-Only Completion & Submission Attempt</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Accessible-Name/Group Inspection for: representative text, radio, checkbox, select, and textarea controls</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Empty Submission</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Malformed Submission</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Valid Submission</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Note: no boundary-minimum or -maximum could be tested as the inputs do not require an input that uses a boundary.</p>
+            </li>
+            <li>
+              <p>320px Viewport Width</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>768px Viewport Width</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>1280px Viewport Width</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>200% Zoom/Reflow</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Focus Visibility</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>200% Zoom/Reflow</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Pointer-Touch Operation</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+            <li>
+              <p>Query-String Inspection with Fictional Data</p>
+              <p>[explanation]</p>
+              [img]
+            </li>
+          </ul>
+        <h3>AI Disclosure:</h3>
+        <p>No AI was used in this project.</p>
       </section>
     </main>
   </body>
