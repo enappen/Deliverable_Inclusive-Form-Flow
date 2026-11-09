@@ -52,6 +52,7 @@
     --space-3:1rem;
     --radius:.5rem;
     --measure:68ch;
+    --padding-cardrow: 0.1rem;
 }
 
 *,*::before,*::after{
@@ -62,7 +63,7 @@ body{
     margin:0;
     color:var(--color-dark);
     background:var(--color-surface);
-    font-family:Arial,sans-serif;
+    font-family: var(--font-body);
     line-height:1.6;
 }
 
@@ -74,7 +75,7 @@ body{
 
 .eyebrow{
     color:var(--color-border);
-    font-weight:700;
+    font-weight: var(--font-weight-bold);
 }
 
 .lede{
@@ -89,7 +90,8 @@ main{
 }
 
 #time {
-    width: 20ch;
+    width: 10rem;
+    height: 3rem;
 }
 
 section,form{
@@ -103,9 +105,30 @@ form,fieldset,.field{
 
 form{
     gap:1.5rem;
+    border: 0.2rem solid var(--color-contrast);
+    border-left: 1rem solid var(--color-contrast);
+    padding: 0.5rem;
+}
+
+.card-row {
+    width: 100%;
+    margin-left:-1rem;
+    padding:0;
+}
+.card {
+    max-width: 350px;
+    padding: var(--space-3);
+    display: block;
+    min-width: 0px;
+}
+
+.card select {
+    margin-top: var(--space-3);
 }
 
 fieldset{
+    display: block;
+    width: 100%;
     padding:1rem;
     border:1px solid #d0d0d0;
     border-radius:var(--radius);
@@ -120,12 +143,24 @@ legend,label{
     color:var(--color-muted);
 }
 
+.field {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 input,select,textarea,button{
     font:inherit;
 }
 
+.text-input {
+    width: 100%;
+    max-width: 625px;
+}
+
 input:not([type="radio"]):not([type="checkbox"]),select,textarea{
     width:100%;
+    height: auto;
     padding:.75rem;
     border:2px solid var(--color-muted);
     border-radius:.25rem;
@@ -146,6 +181,10 @@ textarea{
 .choice input{
     inline-size:1.25rem;
     block-size:1.25rem;
+}
+
+.field-shrinker {
+    min-width: 200px;
 }
 
 button{
@@ -196,12 +235,12 @@ input:disabled {
 }
 
 #discovery {
-    width: 34ch;
+    max-width: 34ch;
 }
 
 .test-record-img {
     width: 100%;
-    max-width: 4rem;
+    max-width: 50vw;
 }
 .table-region {
     overflow-x:auto;
@@ -240,3 +279,21 @@ input:user-invalid, select:user-invalid, #time:user-invalid, textarea:user-inval
         gap:var(--space-3);
     }
 }
+
+@media screen and (min-width: 500px) {
+    form {
+        padding: var(--space-3);
+    }
+    .card-row {
+    padding: var(--padding-cardrow);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    }
+    .card {
+        max-width: 350px;
+        padding: var(--space-3);
+    }
+}
+
+

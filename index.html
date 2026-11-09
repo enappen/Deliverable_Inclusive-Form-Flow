@@ -1,321 +1,397 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Inclusive Form Flow</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="page-header">
-      <p class="eyebrow">Application</p>
-      <h1>Become a Member</h1>
-      <p class="lede">
-        Join our organization as a writer, researcher, or both! Member
-        contribute to our organization by researching and writing topics our
-        subscribers crave and keep them informed. The application takes
-        approximately 3-5 minutes. Upon submission, your application will be
-        reviewed by our team lead who will respond in 5-7 business days.
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inclusive Form Flow</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="page-header">
+    <p class="eyebrow">Application</p>
+    <h1>Become a Member</h1>
+    <p class="lede">
+      Join our organization as a writer, researcher, or both! Member
+      contribute to our organization by researching and writing topics our
+      subscribers crave and keep them informed. The application takes
+      approximately 3-5 minutes. Upon submission, your application will be
+      reviewed by our team lead who will respond in 5-7 business days.
+    </p>
+  </header>
+  <main>
+    <section id="expectations">
+      <h2>F1 · Purpose and Expectations</h2>
+      <p>
+        Please do not enter any confidential information. Information received
+        will not be sold or sent to a third party. <br />
+        Sections with (*) are required to complete.
       </p>
-    </header>
-    <main>
-      <section id="expectations">
-        <h2>F1 · Purpose and Expectations</h2>
-        <p>
-          Please do not enter any confidential information. Information received
-          will not be sold or sent to a third party. <br />
-          Sections with (*) are required to complete.
+    </section>
+    <form action="" method="get">
+      <fieldset>
+        <legend>F3 · Contact information</legend>
+        <p class="help">
+          Replace or extend this group based on your justified field
+          inventory. * &equals; required
         </p>
-      </section>
-      <form action="" method="get">
-        <fieldset>
-          <legend>F3 · Contact information</legend>
-          <p class="help">
-            Replace or extend this group based on your justified field
-            inventory. * &equals; required
-          </p>
-          <div class="field">
-            <label for="name">Name *</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe"/>
-          </div>
-          <div class="field">
-            <label for="phone">Phone Number *</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" required/>
-          </div>
-          <div class="field">
-            <label for="email">Email address *</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              placeholder="jdoe@email.com"
-              required
-            />
-          </div>
-          <div class="field">
-            <label for="time">Preferred time to be contacted *</label>
+        <div class="field">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" class="text-input"/>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" class="text-input" required />
+        </div>
+        <div class="field">
+          <label for="email">Email address *</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="jdoe@email.com" class="text-input" required />
+        </div>
+        <div class="card-row">
+          <div class="card" id="time-card">
+            <label for="time">Preferred time to be contacted *</label><p></p>
             <select id="time" name="time" required>
               <option value="" disabled selected>Select an option</option>
               <option value="morning">Morning</option>
               <option value="afternoon">Afternoon</option>
               <option value="evening">Evening</option>
             </select>
+          </div> 
+          <div class="card">
+            <fieldset class="field-shrinker">
+              <legend>Preferred Method of Contact *</legend>
+              <p class="help">Please select one option.</p>
+              <label class="choice">
+                <input id="prefer-phone" name="preferred-contact" type="radio" value="phone" checked />
+                Phone</label>
+              <label class="choice">
+                <input id="prefer-email" name="preferred-contact" type="radio" value="email" />
+                Email</label>
+            </fieldset>    
           </div>
-          <div class="field">
-            <label for="preferred-contact">Preferred Method of Contact *</label>
-            <p class="help">Please select one option.</p>
-            <label><input id="prefer-phone" name="preferred-contact" type="radio" value="phone" checked/> Phone</label>
-            <label><input id="prefer-email" name="preferred-contact" type="radio" value="email"/> Email</label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>F3 · Preferred position: *</legend>
-          <p class="help">Please select one option.</p>
-          <label class="choice">
-            <input
-              type="radio"
-              id="writing"
-              name="position-preference"
-              value="writing"
-              checked
-            />
-            Writing</label
-          >
-          <label class="choice"
-            ><input
-              type="radio"
-              id="researching"
-              name="position-preference"
-              value="researching"
-            />
-            Researching</label
-          >
-          <label class="choice"
-            ><input
-              type="radio"
-              id="both"
-              name="position-preference"
-              value="both"
-            />
-            Both</label
-          >
-        </fieldset>
-        <div class="field">
-          <label for="about-you">Tell us about yourself (Optional)</label>
-          <p class="help" id="about-you-help">
-            Provide a brief explanation on why you want to be a member. (300
-            characters max)
-          </p>
-          <textarea
-            id="about-you"
-            name="about-you"
-            aria-describedby="about-you-help"
-            maxlength="300"
-            autocomplete="off"
-          ></textarea>
         </div>
-        <div class="field">
-          <label for="discovery"
-            >Where did you hear about us? (Optional)</label>
-          <input
-            type="text"
-            name="discovery"
-            id="discovery"
-            autocomplete="off"
-            maxlength="30"
-            placeholder="EX: Social Media"
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <section id="states">
-        <h2>F5 · State and Recovery Specimen</h2>
-        <p>
-          Document default, focus, required, valid, invalid, disabled, and a
-          static server-returned error. Keep this section separate from the
-          primary blank form when necessary to avoid misleading users.
+      </fieldset>
+      
+      <fieldset>
+        <legend>F3 · Preferred position: *</legend>
+        <p class="help">Please select one option.</p>
+        <label class="choice">
+          <input type="radio" id="writing" name="position-preference" value="writing" checked />
+          Writing</label>
+        <label class="choice"><input type="radio" id="researching" name="position-preference" value="researching" />
+          Researching</label>
+        <label class="choice"><input type="radio" id="both" name="position-preference" value="both" />
+          Both</label>
+      </fieldset>
+      <div class="field">
+        <label for="about-you">Tell us about yourself (Optional)</label>
+        <p class="help" id="about-you-help">
+          Provide a brief explanation on why you want to be a member. (300
+          characters max)
         </p>
-        <div class="state-summary">
-          <h3>Appearance for an input at default:</h3>
-          <p>Default is set to background color inherit.</p>
-          <label for="default-example">Example Input: <input type="text" id="default-example" style="background-color: #faf9f5;"></label>
-        </div>
-        <div class="state-summary">
-          <h3>Appearance for an input at focus:</h3>
-          <p>Visible focus indicators use the same color and format as previous themes, but the color was slightly darkened to help improve contrast for accessibility.</p>
-          <label for="focus-example">Example Input: <input type="text" id="focus-example" style="outline: .2rem solid #81af78; outline-offset: .2rem;"></label>
-        </div>
-        <div class="state-summary">
-          <h3>Appearance for an input that is required:</h3>
-          <p>Input required is set to inherit background color as required elements are already accentuated with an asterisk (*) as mentioned in the legend and a heavier border and different color would result in over-styling.</p>
-          <label for="required-example">Example Input: *<input type="text" id="required-example"></label>
-        </div>
-        <div class="state-summary">
-          <h3>Appearance for an input that is valid:</h3>
-          <p>User-valid is used to maintain default colors until after the user interacts with the input. When the user does the background turn into a soft pastel green color.</p>
-          <label for="valid-example">Example Input: <input type="text" id="valid-example" style="background-color: #d9e9e0fd;"></label>
-        </div>
-        <div class="state-summary">
-          <h3>Appearance for an input that is invalid:</h3>
-          <p>User-invalid makes the background color turn light red after interacting and providing an invalid input. After submission a text bubble will appear next to the top input that has an error explaining how to fix it.</p>
-          <label for="invalid-example">Example Input: <input type="text" id="invalid-example" style="background-color: #eeb9ba;"></label>
-        </div>
-        <div class="state-summary">
-          <h3>Appearance for an elements that are disabled:</h3>
-          <p>Disabled elements are given a 75% opacity to meet contrast accessibility requirements and provide a muted tone of the button indicating its inability to be used and the cursor is not allowed to interact with the element.</p>
-          <label for="disabled-example">Example Input: <input type="text" id="disabled-example" disabled></label>
-          <button type="button" style="margin-top: 1rem;" disabled>Disabled example</button>
-        </div>
-        <div class="error-summary">
-          <h3>There is a problem with the fictional submission</h3>
-          <p><a href="#error-example">Email address needs attention</a></p>
-        </div>
-        <div class="field field-error">
-          <label for="error-example">Email address</label>
-          <input
-            id="error-example"
-            type="email"
-            value="alex.example"
-            aria-invalid="true"
-            aria-describedby="error-message"
-          />
-          <p id="error-message">
-            <strong>Error:</strong> Enter an address in the format
-            name@example.com.
-          </p>
-        </div>
-      </section>
-      <section id="documentation">
-        <h2>F2 and F6 · Planning and Evidence</h2>
+        <textarea id="about-you" name="about-you" aria-describedby="about-you-help" maxlength="300"
+          autocomplete="off"></textarea>
+      </div>
+      <div class="field">
+        <label for="discovery">Where did you hear about us? (Optional)</label>
+        <input type="text" name="discovery" id="discovery" autocomplete="off" maxlength="30"
+          placeholder="EX: Social Media" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <section id="states">
+      <h2>F5 · State and Recovery Specimen</h2>
+      <p>
+        Document default, focus, required, valid, invalid, disabled, and a
+        static server-returned error. Keep this section separate from the
+        primary blank form when necessary to avoid misleading users.
+      </p>
+      <div class="state-summary">
+        <h3>Appearance for an input at default:</h3>
+        <p>Default is set to background color inherit.</p>
+        <label for="default-example">Example Input:
+          <input type="text" id="default-example" style="background-color: #faf9f5" /></label>
+      </div>
+      <div class="state-summary">
+        <h3>Appearance for an input at focus:</h3>
         <p>
-          Link your field inventory, state matrix, fictional test-data list,
-          completed test record, and AI disclosure.
+          Visible focus indicators use the same color and format as previous
+          themes, but the color was slightly darkened to help improve contrast
+          for accessibility.
         </p>
-        <h3>Fictional Test-Data List: </h3>
-        <p><a href="field-inventory-template.html">See Table List</a></p>
+        <label for="focus-example">Example Input:
+          <input type="text" id="focus-example" style="outline: 0.2rem solid #81af78; outline-offset: 0.2rem" /></label>
+      </div>
+      <div class="state-summary">
+        <h3>Appearance for an input that is required:</h3>
+        <p>
+          Input required is set to inherit background color as required
+          elements are already accentuated with an asterisk (*) as mentioned
+          in the legend and a heavier border and different color would result
+          in over-styling.
+        </p>
+        <label for="required-example">Example Input: *<input type="text" id="required-example" /></label>
+      </div>
+      <div class="state-summary">
+        <h3>Appearance for an input that is valid:</h3>
+        <p>
+          User-valid is used to maintain default colors until after the user
+          interacts with the input. When the user does the background turn
+          into a soft pastel green color.
+        </p>
+        <label for="valid-example">Example Input:
+          <input type="text" id="valid-example" style="background-color: #d9e9e0fd" /></label>
+      </div>
+      <div class="state-summary">
+        <h3>Appearance for an input that is invalid:</h3>
+        <p>
+          User-invalid makes the background color turn light red after
+          interacting and providing an invalid input. After submission a text
+          bubble will appear next to the top input that has an error
+          explaining how to fix it.
+        </p>
+        <label for="invalid-example">Example Input:
+          <input type="text" id="invalid-example" style="background-color: #eeb9ba" /></label>
+      </div>
+      <div class="state-summary">
+        <h3>Appearance for an elements that are disabled:</h3>
+        <p>
+          Disabled elements are given a 75% opacity to meet contrast
+          accessibility requirements and provide a muted tone of the button
+          indicating its inability to be used and the cursor is not allowed to
+          interact with the element.
+        </p>
+        <label for="disabled-example">Example Input: <input type="text" id="disabled-example" disabled /></label>
+        <button type="button" style="margin-top: 1rem" disabled>
+          Disabled example
+        </button>
+      </div>
+      <div class="error-summary">
+        <h3>There is a problem with the fictional submission</h3>
+        <p><a href="#error-example">Email address needs attention</a></p>
+      </div>
+      <div class="field field-error">
+        <label for="error-example">Email address</label>
+        <input id="error-example" type="email" value="alex.example" aria-invalid="true"
+          aria-describedby="error-message" />
+        <p id="error-message">
+          <strong>Error:</strong> Enter an address in the format
+          name@example.com.
+        </p>
+      </div>
+    </section>
+    <section id="documentation">
+      <h2>F2 and F6 · Planning and Evidence</h2>
+      <p>
+        Link your field inventory, state matrix, fictional test-data list,
+        completed test record, and AI disclosure.
+      </p>
+      <h3>Fictional Test-Data List:</h3>
+      <p><a href="field-inventory-template.html">See Table List</a></p>
 
-        <h3>State Matrix</h3>
-          <div class="table-region">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">State</th>
-                  <th scope="col">User must perceive</th>
-                  <th scope="col">Implementation concern</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Default</td>
-                  <td>The control boundary is for the background color which is set to inherit. The default pseudo-selector is used for input, the preferred time ID, textarea, and required. The default setting also applies to optional and required fields ensuring everything starts with the same appearance.</td>
-                  <td>Even though the preferred time section doesn't have a default selection option, it will still turn green after the user interacts. This way, a valid input is always selected but the user is visually informed on inputs they have completed successfully.</td>
-                </tr>
-                <tr>
-                  <td>Focus</td>
-                  <td>Current Keyboard Location</td>
-                  <td>A visible focus indicator was used with an outline that has a contrasting color theme (--color-border/##81af78) and a small offset.</td>
-                </tr>
-                <tr>
-                  <td>Invalid/Error</td>
-                  <td>Where the error occurred in the form, why, and how to fix it.</td>
-                  <td>A light red background will fill the invalid input and a text bubble below will provide context on how to fix the error based on its declared type.</td>
-                </tr>
-                <tr>
-                  <td>Disabled</td>
-                  <td>Elements that cannot be interacted with</td>
-                  <td>Button opacity is set to 75%, input background color is changed to a gray color, and the cursor is unable to interact with the element.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      <h3>State Matrix</h3>
+      <div class="table-region">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">State</th>
+              <th scope="col">User must perceive</th>
+              <th scope="col">Implementation concern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td>
+                The control boundary is for the background color which is set
+                to inherit. The default pseudo-selector is used for input, the
+                preferred time ID, textarea, and required. The default setting
+                also applies to optional and required fields ensuring
+                everything starts with the same appearance.
+              </td>
+              <td>
+                Even though the preferred time section doesn't have a default
+                selection option, it will still turn green after the user
+                interacts. This way, a valid input is always selected but the
+                user is visually informed on inputs they have completed
+                successfully.
+              </td>
+            </tr>
+            <tr>
+              <td>Focus</td>
+              <td>Current Keyboard Location</td>
+              <td>
+                A visible focus indicator was used with an outline that has a
+                contrasting color theme (--color-border/##81af78) and a small
+                offset.
+              </td>
+            </tr>
+            <tr>
+              <td>Invalid/Error</td>
+              <td>
+                Where the error occurred in the form, why, and how to fix it.
+              </td>
+              <td>
+                A light red background will fill the invalid input and a text
+                bubble below will provide context on how to fix the error
+                based on its declared type.
+              </td>
+            </tr>
+            <tr>
+              <td>Disabled</td>
+              <td>Elements that cannot be interacted with</td>
+              <td>
+                Button opacity is set to 75%, input background color is
+                changed to a gray color, and the cursor is unable to interact
+                with the element.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <h3>Fictional Test-Data List</h3>
+      <h3>Fictional Test-Data List</h3>
 
-        <h3>Test Record</h3>
-          <ul> 
-            <li>
-              <p>HTML Validation</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>CSS Validation</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Keyboard-Only Completion & Submission Attempt</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Accessible-Name/Group Inspection for: representative text, radio, checkbox, select, and textarea controls</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Empty Submission</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Malformed Submission</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Valid Submission</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Note: no boundary-minimum or -maximum could be tested as the inputs do not require an input that uses a boundary.</p>
-            </li>
-            <li>
-              <p>320px Viewport Width</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>768px Viewport Width</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>1280px Viewport Width</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>200% Zoom/Reflow</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Focus Visibility</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>200% Zoom/Reflow</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Pointer-Touch Operation</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-            <li>
-              <p>Query-String Inspection with Fictional Data</p>
-              <p>[explanation]</p>
-              [img]
-            </li>
-          </ul>
-        <h3>AI Disclosure:</h3>
-        <p>No AI was used in this project.</p>
-      </section>
-    </main>
-  </body>
+      <h3>Test Record</h3>
+      <ul>
+        <li>
+          <p>HTML Validation</p>
+          <p>
+            To check for any HTML errors, I ran the HTML script through the
+            W3C HTML validator. I expected no errors to occur. After running
+            the script through the validator, I discovered 3 errors: one for
+            the forms action attribute value, one for no default option on the
+            select input, and one for the programmatic connection between
+            label and input for the preferred contact question.
+          </p>
+          <img src="Test-Record-Screenshots/HTML-validation-error.png"
+            alt="Screenshot displaying three errors reported by the HTML Validator." class="test-record-img" />
+          <p>
+            The first error is message addressing the empty action attribute.
+            Due to the nature of this assignment, data is to not be actually
+            collected. The blank action value ensures that upon submission
+            of the form, it is reset and data submitted is available in the URL
+            for verifying that data is properly sent and name and values are
+            paired. For this reason, no change will be made to the action attribute.
+          </p>
+          <p>
+            For the second error, no default(placeholder) option on the input with
+            the select and option element, the solution was fairly straightforward.
+            An option was added with the name "Select an option". This value is
+            disabled and selected. This allows for the placeholder button to not be
+            a selectable option, the set default, and a prompt for the user to make
+            a choice. The styled states assist with informing the user that they are
+            completing the form correctly. It is gray when at default to also indicate
+            that choice is disabled. It is red if the user clicks on the dropdown menu
+            but then clicks away without selecting an option. It is green when an option
+            is selected. The script was run through the HTML validator to confirm that 
+            the second error was corrected as anticipated. After running through, the 
+            second error was corrected.
+          </p>
+          <img src="Test-Record-Screenshots/HTML-validation-correction1.png" 
+            alt="Screenshot displaying two validation errors. The dropdown error is no longer on the list." class="test-record-img" />
+          <p>
+            To address the programmatic association error on the preferred method of 
+            contact question the field was reformatted to have a fieldset to associate the  
+            input options with the label. To test that this corrected the issue I ran the 
+            script through the HTML validator expecting all errors to be resolved except for 
+            the empty action value error. After running the script again, the error was 
+            resolved and expectations were met.
+          </p>
+          <img src="Test-Record-Screenshots/HTML-validation-correction2.png" 
+            alt="Screenshot of the HTML validator with only one error for the empty action attribute indicating the other errors were resolved." class="test-record-img" />
+        </li>
+        <li>
+          <p>CSS Validation</p>
+          <p>
+            To check for any CSS errors, I ran the CSS code through the CSS
+            validator. I expected for no errors to be reported. After using
+            W3C's CSS validation tool, I received confirmation that there was
+            no errors present.
+          </p>
+          <img src="Test-Record-Screenshots/CSS-validator.png" alt="CSS validator stating that no errors were found."
+            class="test-record-img" />
+        </li>
+        <li>
+          <p>Keyboard-Only Completion & Submission Attempt</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>
+            Accessible-Name/Group Inspection for: representative text, radio,
+            checkbox, select, and textarea controls
+          </p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>Empty Submission</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>Malformed Submission</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>Valid Submission</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>
+            Note: no boundary-minimum or -maximum could be tested as the
+            inputs do not require an input that uses a boundary.
+          </p>
+        </li>
+        <li>
+          <p>320px Viewport Width</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>768px Viewport Width</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>1280px Viewport Width</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>200% Zoom/Reflow</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>Focus Visibility</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>200% Zoom/Reflow</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>Pointer-Touch Operation</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+        <li>
+          <p>Query-String Inspection with Fictional Data</p>
+          <p>[explanation]</p>
+          [img]
+        </li>
+      </ul>
+      <h3>AI Disclosure:</h3>
+      <p>No AI was used in this project.</p>
+    </section>
+  </main>
+</body>
+
 </html>
