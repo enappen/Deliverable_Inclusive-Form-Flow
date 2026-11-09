@@ -38,6 +38,9 @@ main{
     margin:auto;
     padding:var(--space-3);
 }
+#time {
+    width: 13ch;
+}
 section,form{
     margin-block:2rem;
 }
