@@ -33,31 +33,34 @@
       <fieldset>
         <legend>F3 · Contact information</legend>
         <p class="help">
-          Replace or extend this group based on your justified field
-          inventory. * &equals; required
+          Please answer the following:
         </p>
         <div class="field">
           <label for="name">Name *</label>
-          <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" class="text-input"/>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" class="text-input"
+            required />
         </div>
         <div class="field">
           <label for="phone">Phone Number *</label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" class="text-input" required />
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" class="text-input"
+            required />
         </div>
         <div class="field">
           <label for="email">Email address *</label>
-          <input id="email" name="email" type="email" autocomplete="email" placeholder="jdoe@email.com" class="text-input" required />
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="jdoe@email.com"
+            class="text-input" required />
         </div>
         <div class="card-row">
           <div class="card" id="time-card">
-            <label for="time">Preferred time to be contacted *</label><p></p>
+            <label for="time">Preferred time to be contacted *</label>
+            <p></p>
             <select id="time" name="time" required>
               <option value="" disabled selected>Select an option</option>
               <option value="morning">Morning</option>
               <option value="afternoon">Afternoon</option>
               <option value="evening">Evening</option>
             </select>
-          </div> 
+          </div>
           <div class="card">
             <fieldset class="field-shrinker">
               <legend>Preferred Method of Contact *</legend>
@@ -68,11 +71,11 @@
               <label class="choice">
                 <input id="prefer-email" name="preferred-contact" type="radio" value="email" />
                 Email</label>
-            </fieldset>    
+            </fieldset>
           </div>
         </div>
       </fieldset>
-      
+
       <fieldset>
         <legend>F3 · Preferred position: *</legend>
         <p class="help">Please select one option.</p>
@@ -252,11 +255,91 @@
       </div>
 
       <h3>Fictional Test-Data List</h3>
+      <ul>
+        <li id="keyboard-only">
+          Test: Keyboard-Only Form Completion
+          <ul>
+            <li>Name: Jane Doe</li>
+            <li>Phone Number: 555-555-1960</li>
+            <li>Email: jsodoe@email.net</li>
+            <li>Preferred Time: Afternoon</li>
+            <li>Preferred Contact: Email</li>
+            <li>Preferred Position: Researching</li>
+            <li>Tell us about yourself: Jane is cool.</li>
+            <li>Discovery: Instagram</li>
+          </ul>
+        </li>
+        <li id="malformed">
+          Test: Malformed Submission
+          <ul>
+            <li>Name: Diana Bishop</li>
+            <li>Phone Number: 7787351577</li>
+            <li>Email: glowBishop</li>
+            <li>Preferred Time: Morning</li>
+            <li>Preferred Contact: Phone</li>
+            <li>Preferred Position: Both</li>
+            <li>Tell us about yourself: [Empty]</li>
+            <li>Discovery: [Empty]</li>
+          </ul>
+        </li>
+        <li if="valid-sub">
+          Test: Valid Submission
+          <ul>
+            <li>Name: Winston Churchill</li>
+            <li>Phone Number: 925-258-7391</li>
+            <li>Email: theChurchillest@sbcglobal.net</li>
+            <li>Preferred Time: Evening</li>
+            <li>Preferred Contact: Email</li>
+            <li>Preferred Position: Writing</li>
+            <li>Tell us about yourself: My words have made a profound impact in history.</li>
+            <li>Discovery: [Empty]</li>
+          </ul>
+        </li>
+        <li id="query-fiction">
+          Test: Query-String Inspection
+          <ul>
+            <li>Name: Suzie Que</li>
+            <li>Phone Number: 999-103-8521</li>
+            <li>Email: theSuzinator@gmail.com</li>
+            <li>Preferred Time: Afternoon</li>
+            <li>Preferred Contact: Email</li>
+            <li>Preferred Position: Writing</li>
+            <li>Tell us about yourself: I have 20 years of writing experience.</li>
+            <li>Discovery: Facebook</li>
+          </ul>
+        </li>
+        <li>
+          Test: Query-String Inspection
+          <ul>
+            <li>Name: Leonard Hoffstadter</li>
+            <li>Phone Number: 707-599-9999</li>
+            <li>Email: physicskid@msn.com</li>
+            <li>Preferred Time: Morning</li>
+            <li>Preferred Contact: Phone</li>
+            <li>Preferred Position: Research</li>
+            <li>Tell us about yourself: I have dedicated my life to researching.</li>
+            <li>Discovery: Don't know</li>
+          </ul>
+        </li>
+        <li>
+          Test: Query-String Inspection
+          <ul>
+            <li>Name: Dean Briar</li>
+            <li>Phone Number: 323-599-0710</li>
+            <li>Email: person@email.com</li>
+            <li>Preferred Time: Evening</li>
+            <li>Preferred Contact: Email</li>
+            <li>Preferred Position: Both</li>
+            <li>Tell us about yourself: Just seems fun!</li>
+            <li>Discovery: Local Newspaper Ad</li>
+          </ul>
+        </li>
+      </ul>
 
       <h3>Test Record</h3>
       <ul>
         <li>
-          <p>HTML Validation</p>
+          <h4>HTML Validation</h4>
           <p>
             To check for any HTML errors, I ran the HTML script through the
             W3C HTML validator. I expected no errors to occur. After running
@@ -285,25 +368,27 @@
             completing the form correctly. It is gray when at default to also indicate
             that choice is disabled. It is red if the user clicks on the dropdown menu
             but then clicks away without selecting an option. It is green when an option
-            is selected. The script was run through the HTML validator to confirm that 
-            the second error was corrected as anticipated. After running through, the 
+            is selected. The script was run through the HTML validator to confirm that
+            the second error was corrected as anticipated. After running through, the
             second error was corrected.
           </p>
-          <img src="Test-Record-Screenshots/HTML-validation-correction1.png" 
-            alt="Screenshot displaying two validation errors. The dropdown error is no longer on the list." class="test-record-img" />
+          <img src="Test-Record-Screenshots/HTML-validation-correction1.png"
+            alt="Screenshot displaying two validation errors. The dropdown error is no longer on the list."
+            class="test-record-img" />
           <p>
-            To address the programmatic association error on the preferred method of 
-            contact question the field was reformatted to have a fieldset to associate the  
-            input options with the label. To test that this corrected the issue I ran the 
-            script through the HTML validator expecting all errors to be resolved except for 
-            the empty action value error. After running the script again, the error was 
+            To address the programmatic association error on the preferred method of
+            contact question the field was reformatted to have a fieldset to associate the
+            input options with the label. To test that this corrected the issue I ran the
+            script through the HTML validator expecting all errors to be resolved except for
+            the empty action value error. After running the script again, the error was
             resolved and expectations were met.
           </p>
-          <img src="Test-Record-Screenshots/HTML-validation-correction2.png" 
-            alt="Screenshot of the HTML validator with only one error for the empty action attribute indicating the other errors were resolved." class="test-record-img" />
+          <img src="Test-Record-Screenshots/HTML-validation-correction2.png"
+            alt="Screenshot of the HTML validator with only one error for the empty action attribute indicating the other errors were resolved."
+            class="test-record-img" />
         </li>
         <li>
-          <p>CSS Validation</p>
+          <h4>CSS Validation</h4>
           <p>
             To check for any CSS errors, I ran the CSS code through the CSS
             validator. I expected for no errors to be reported. After using
@@ -314,78 +399,192 @@
             class="test-record-img" />
         </li>
         <li>
-          <p>Keyboard-Only Completion & Submission Attempt</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>Keyboard-Only Completion & Submission Attempt</h4>
+          <p>To test keyboard accessibility the website was navigated, completed and submitted using
+            the keyboard only. I expected the visual focus indicator to be present as the site
+            was navigated, tabbing to move through inputs, up and down keys to pick between
+            options, and the state matrix table to navigable using the left and right keys when the
+            table overflows from a smaller viewport. As I went through the form, I observed the visual
+            focus indicator was present and didn't change input colors unless the inputs were directly
+            interacted with through typing of option selection. Tabbing and arrow keys functioned as
+            expected and the submit button was pressed using the enter key. The third image below shows
+            the submitted data in the URL for proof. No changes were needed.<br>
+            <a href="#keyboard-only">Fictional Data Used</a>
+          </p>
+          <img src="Test-Record-Screenshots/Keyboard-Only_visual-indicator.png"
+            alt="A screenshot of this website with a green outline around the phone number input field"
+            class="test-record-img//">
+          <img src="Test-Record-Screenshots/Keyboard-Only_form-completion.png"
+            alt="A screenshot showing the form was successfully fillable through keyboard use alone."
+            class="test-record-img" />
+          <img src="Test-Record-Screenshots/Keyboard-Only_submit-proof.png"
+            alt="A screenshot of the url that was populated from submitting the form with the keyboard only."
+            class="test-record-img" />
         </li>
         <li>
-          <p>
+          <h4>
             Accessible-Name/Group Inspection for: representative text, radio,
             checkbox, select, and textarea controls
+          </h4>
+          <p>To ensure accessible name/group controls followed WGAC standards, I opened the accessibility tree
+            for the website to observe matching value for name and group attributes. This ensures each input or
+            button is programmatically associated to it's holder and easier for those with assistive technologies
+            to navigate. I expected clear relationships for each element and no problems reported. I observed
+            the clear relationships with no reported problems in the check panel. No changes were needed.
           </p>
-          <p>[explanation]</p>
-          [img]
+          <img src="Test-Record-Screenshots/Accessible_name-group_inspection.png"
+            alt="A screenshot of the accessibility tree for the website showing matching name/group relationships for all elements."
+            class="test-record-img" />
         </li>
         <li>
-          <p>Empty Submission</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>Empty Submission</h4>
+          <p>To ensure requirements are enforced, I submitted an empty form. I expected the form to refuse being
+            submitted
+            turn required area red, and provide a textual clue as to how to fix the top-most invalid input. After
+            submitting the form,
+            I observed the form did not submit (which can be confirmed by the URL not changing), invalid required inputs
+            turned red, optional
+            inputs turned green, and the top invalid input had a textual cue on how to fix the input. No changes were
+            needed.
+          </p>
+          <img src="Test-Record-Screenshots/Submit-empty.png"
+            alt="Screenshot showing how an empty submission prevents the form itself from being submitted, turns required areas red, and optional areas green."
+            class="test-record-img" />
         </li>
         <li>
-          <p>Malformed Submission</p>
-          <p>[explanation]</p>
-          [img]
-        </li>
-        <li>
-          <p>Valid Submission</p>
-          <p>[explanation]</p>
-          [img]
-        </li>
-        <li>
+          <h4>Malformed Submission</h4>
           <p>
+            To test how incorrect inputs are handled by the form, a submission was made with an incorrectly formatted
+            email.
+            I expected the form to not submit, the email input to turn red, and a textual cue explaining how to fix the
+            email input.
+            After submitting, I observed that all expectations were met. No changes were needed.<br>
+            <a href="#malformed">Fictional Data Used</a>
+          </p>
+          <img src="Test-Record-Screenshots/Malformed-Submission.png"
+            alt="A screenshot of the email field being completed incorrectly, with a red background on the invalid input."
+            class="test-record-img" />
+        </li>
+        <li>
+          <h4>Valid Submission</h4>
+          <p>
+            To test how the form handles valid submissions, a form was completed to meet all requirements. I expected
+            the inputs to turn
+            green after being properly entered and the data to appear in the URL after submission. I observed all inputs
+            turn green and the
+            form submitted properly, presenting the data in the URL as expected. No changes were needed.<br>
+            <a href="#valid-sub">Fictional Data Used</a>
+          </p>
+          <img src="Test-Record-Screenshots/Submit-Valid.png" alt="Screenshot of all the inputs correctly input."
+            class="test-record-img" />
+          <img src="Test-Record-Screenshots/Sumit-Valid-Record.png"
+            alt="Screenshot of the empty form after submission and the submitted data present in the URL."
+            class="test-record-img" />
+        </li>
+        <li>
+          <p style="font-style: italic;">
             Note: no boundary-minimum or -maximum could be tested as the
             inputs do not require an input that uses a boundary.
           </p>
         </li>
         <li>
-          <p>320px Viewport Width</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>320px Viewport Width</h4>
+          <p>To test the responsiveness on smaller screens, I set the viewport to 320px in responsive mode to check for
+            overflow and
+            any anomalies that may have occurred to the layout. I expect all fields to scale down to fit the viewport,
+            the preferred
+            contact and time should stack, and any instructional text should wrap. I observed there was no overflow from
+            any fields
+            of the form, preferred contact and time stacked, and the layout formatted itself as expected. No changes are
+            needed.
+          </p>
+          <img src="Test-Record-Screenshots/Viewport-320px.png"
+            alt="A screenshot of the form in responsive mode with the viewport set to 320px and no overflow occurring."
+            class="test-record-img" />
         </li>
         <li>
-          <p>768px Viewport Width</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>768px Viewport Width</h4>
+          <p>To test the responsiveness on medium-sized screens, I set the viewport to 768px in responsive mode to check
+            for overflow
+            and any anomalies that may have occurred to the layout. I expected all fields to scale down to fit the
+            viewport and the
+            preferred contact and time should move to the same row. I observed that there was no overflow, the layout
+            formatted itself
+            as expected and the preferred contact and time fields moved to the same row. No changes are needed.
+          </p>
+          <img src="Test-Record-Screenshots/Viewport-768px.png"
+            alt="A screenshot of the form in the responsive mode with the viewport set to 768px and no overflow occurring."
+            class="test-record-img" />
         </li>
         <li>
-          <p>1280px Viewport Width</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>1280px Viewport Width</h4>
+          <p>To test the responsiveness on larger screens, I set the viewport to 1280px in responsive mode to check for
+            overflow
+            and any anomalies that may have occurred to the layout. I expected the same layout to appear as the 768px
+            width screen but
+            scaled a little larger. There is a max-width property used on main that should limit the form from scaling
+            too large. I
+            observed that the form layout behaved as expected and no anomalies or overflow was present.
+          </p>
+          <img src="Test-Record-Screenshots/Viewport-1280px.png"
+            alt="A screenshot of the form in the responsive mode with the viewport set to 1280px and no overflow occurring."
+            class="test-record-img" />
         </li>
         <li>
-          <p>200% Zoom/Reflow</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>200% Zoom/Reflow</h4>
+          <p>To test how the website handles zooming and layout formatting, I zoomed in on the website at 200%. (This
+            can be confirmed by
+            observing the URL on the right. The browser states how zoomed in the website is.) I expected the website to
+            take on the small
+            screen format to keep the layout readable and navigable, while maintaining crisp text. I observed that the
+            website acted as
+            expected with no issues on layout, sharp text, or navigability. No changes are needed.
+          </p>
+          <img src="Test-Record-Screenshots/Zoom-200.png"
+            alt="Screenshot of the website zoomed in at 200% while maintaining sharp text and a readable layout."
+            class="test-record-img" />
         </li>
         <li>
-          <p>Focus Visibility</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>Focus Visibility</h4>
+          <p>To ensure the visual focus indicator was working properly, I tabbed through the document to ensure each
+            input
+            display out the green outline. I expected the outline to appear in sequential order while moving through the
+            form. I observed the focus indicator working properly. No changes are needed.
+          </p>
+          <img src="Test-Record-Screenshots/focus-indicator.png"
+            alt="Screenshot of the visual focus indicator creating a green outline around the phone option for preferred contact."
+            class="test-record-img" />
         </li>
         <li>
-          <p>200% Zoom/Reflow</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>Pointer-Touch Operation</h4>
+          <p>To test that the form was touch friendly, I went through and selected options in different fields by their
+            label. I expected that
+            clicking the label would select the input attached. I observed the label properly selected the input it is
+            programmatically attached to.
+            No changes are needed.
+          </p>
+          <img src="Test-Record-Screenshots/Pointer-Touch.png"
+            alt="Screenshot of the carat (the blinking pipe that shows where you are at in a text) blinking on the Researching option being selected in the preferred position question."
+            class="test-record-img" />
         </li>
         <li>
-          <p>Pointer-Touch Operation</p>
-          <p>[explanation]</p>
-          [img]
-        </li>
-        <li>
-          <p>Query-String Inspection with Fictional Data</p>
-          <p>[explanation]</p>
-          [img]
+          <h4>Query-String Inspection with Fictional Data</h4>
+          <p>
+            As no information is supposed to be collected for this project, 3 sets of fictional data was submitted in
+            the form to
+            observe that it was parsed and paired properly in the URL. For each submission, I expect the data to
+            properly pair and
+            list all data input correctly. After each submission, I observed a proper output and no errors. The below
+            images reflect
+            how the data was output in sequential order.
+            <br><a href="#query-fiction">Fictional Data Used</a>
+          </p>
+          <img src="Test-Record-Screenshots/Query1.png"
+            alt="Screenshot of fictional data (1) output in the URL after submission." class="test-record-img" />
+          <img src="Test-Record-Screenshots/Query2.png"
+            alt="Screenshot of fictional data (2) output in the URL after submission." class="test-record-img" />
+          <img src="Test-Record-Screenshots/Query3.png"
+            alt="Screenshot of fictional data (3) output in the URL after submission." class="test-record-img" />
         </li>
       </ul>
       <h3>AI Disclosure:</h3>
@@ -393,5 +592,4 @@
     </section>
   </main>
 </body>
-
 </html>

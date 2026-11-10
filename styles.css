@@ -3,297 +3,317 @@
     Licensing Information: https://openfontlicense.org/ 
 */
 @font-face {
-    font-family: 'Lato';
-    src: url('Web-Fonts/Lato-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("Web-Fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Web-Fonts/Lato-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("Web-Fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Web-Fonts/Lato-Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("Web-Fonts/Lato-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Web-Fonts/Lato-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("Web-Fonts/Lato-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Global Values */
-:root{
-    --font-body: "Lato", "Arial", sans-serif;
-    --color-dark: #000000;
-    --color-contrast: #111e69;
-    --color-accent: #faf9f5;
-    --color-muted: #4960ac;
-    --color-border: #81af78;
-    --color-alt: #5f0000;
-    --color-success: #d9e9e0fd;
-    --color-altaccent: #eeb9ba;
-    --font-size-svg-subtext: 1.15rem;
-    --font-size-svg-headers: 2.9rem;
-    --font-weight-bold: 700;
-    --letter-spacing-svg-subtext: 5%;
-    --space-3:1rem;
-    --radius:.5rem;
-    --measure:68ch;
-    --padding-cardrow: 0.1rem;
+:root {
+  --font-body: "Lato", "Arial", sans-serif;
+  --color-dark: #000000;
+  --color-contrast: #111e69;
+  --color-accent: #faf9f5;
+  --color-muted: #4960ac;
+  --color-border: #81af78;
+  --color-alt: #5f0000;
+  --color-success: #d9e9e0fd;
+  --color-altaccent: #eeb9ba;
+  --font-size-svg-subtext: 1.15rem;
+  --font-size-svg-headers: 2.9rem;
+  --font-weight-bold: 700;
+  --letter-spacing-svg-subtext: 5%;
+  --space-3: 1rem;
+  --radius: 0.5rem;
+  --measure: 68ch;
+  --padding-cardrow: 0.1rem;
 }
 
-*,*::before,*::after{
-    box-sizing:border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    color:var(--color-dark);
-    background:var(--color-surface);
-    font-family: var(--font-body);
-    line-height:1.6;
+body {
+  margin: 0;
+  color: var(--color-dark);
+  background: var(--color-surface);
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
 
-.page-header{
-    padding:clamp(2rem,6vw,5rem);
-    background:var(--color-contrast);
-    color:var(--color-accent);
+.page-header {
+  padding: clamp(2rem, 6vw, 5rem);
+  background: var(--color-contrast);
+  color: var(--color-accent);
 }
 
-.eyebrow{
-    color:var(--color-border);
-    font-weight: var(--font-weight-bold);
+.eyebrow {
+  color: var(--color-border);
+  font-weight: var(--font-weight-bold);
 }
 
-.lede{
-    max-width:var(--measure);
-    font-size:1.25rem;
+.lede {
+  max-width: var(--measure);
+  font-size: 1.25rem;
 }
 
-main{
-    max-width:52rem;
-    margin:auto;
-    padding:var(--space-3);
+main {
+  max-width: 52rem;
+  margin: auto;
+  padding: var(--space-3);
 }
 
 #time {
-    width: 10rem;
-    height: 3rem;
+  width: 10rem;
+  height: 3rem;
 }
 
-section,form{
-    margin-block:2rem;
+section,
+form {
+  margin-block: 2rem;
 }
 
-form,fieldset,.field{
-    display:grid;
-    gap:.65rem;
+form,
+fieldset,
+.field {
+  display: grid;
+  gap: 0.65rem;
 }
 
-form{
-    gap:1.5rem;
-    border: 0.2rem solid var(--color-contrast);
-    border-left: 1rem solid var(--color-contrast);
-    padding: 0.5rem;
+form {
+  gap: 1.5rem;
+  border: 0.2rem solid var(--color-contrast);
+  border-left: 1rem solid var(--color-contrast);
+  padding: 0.5rem;
 }
 
 .card-row {
-    width: 100%;
-    margin-left:-1rem;
-    padding:0;
+  width: 100%;
+  margin-left: -1rem;
+  padding: 0;
 }
 .card {
-    max-width: 350px;
-    padding: var(--space-3);
-    display: block;
-    min-width: 0px;
+  max-width: 350px;
+  padding: var(--space-3);
+  display: block;
+  min-width: 0px;
 }
 
 .card select {
-    margin-top: var(--space-3);
+  margin-top: var(--space-3);
 }
 
-fieldset{
-    display: block;
-    width: 100%;
-    padding:1rem;
-    border:1px solid #d0d0d0;
-    border-radius:var(--radius);
+fieldset {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: var(--radius);
 }
 
-legend,label{
-    font-weight:700;
+legend,
+label {
+  font-weight: 700;
 }
 
-.help{
-    margin:0;
-    color:var(--color-muted);
+.help {
+  margin: 0;
+  color: var(--color-muted);
 }
 
 .field {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-input,select,textarea,button{
-    font:inherit;
+input,
+select,
+textarea,
+button {
+  font: inherit;
 }
 
 .text-input {
-    width: 100%;
-    max-width: 625px;
+  width: 100%;
+  max-width: 625px;
 }
 
-input:not([type="radio"]):not([type="checkbox"]),select,textarea{
-    width:100%;
-    height: auto;
-    padding:.75rem;
-    border:2px solid var(--color-muted);
-    border-radius:.25rem;
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+  width: 100%;
+  height: auto;
+  padding: 0.75rem;
+  border: 2px solid var(--color-muted);
+  border-radius: 0.25rem;
 }
 
-textarea{
-    min-height:7.5rem;
-    resize:vertical;
+textarea {
+  min-height: 7.5rem;
+  resize: vertical;
 }
 
-.choice{
-    display:flex;
-    gap:.65rem;
-    align-items:flex-start;
-    padding:.5rem 0;
+.choice {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  padding: 0.5rem 0;
 }
 
-.choice input{
-    inline-size:1.25rem;
-    block-size:1.25rem;
+.choice input {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
 }
 
 .field-shrinker {
-    min-width: 200px;
+  min-width: 200px;
 }
 
-button{
-    justify-self:start;
-    min-height:44px;
-    padding:.75rem 1rem;
-    background:var(--color-contrast);
-    color:#fff;
-    border:2px solid var(--color-contrast);
-    border-radius:.25rem;
-    font-weight:700;
+button {
+  justify-self: start;
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  background: var(--color-contrast);
+  color: #fff;
+  border: 2px solid var(--color-contrast);
+  border-radius: 0.25rem;
+  font-weight: 700;
 }
 
-:focus-visible, .table-region:focus-visible{
-    outline:.2rem solid var(--color-border);
-    outline-offset:.2rem;
+:focus-visible,
+.table-region:focus-visible {
+  outline: 0.2rem solid var(--color-border);
+  outline-offset: 0.2rem;
 }
 
 .state-summary {
-    padding:var(--space-3);
-    border-left:.4rem solid var(--color-muted);
-    border-top: .2rem solid var(--color-muted);
-    border-bottom: .2rem solid var(--color-muted);
-    border-right: .2rem solid var(--color-muted);
-    margin-bottom: var(--space-3);
+  padding: var(--space-3);
+  border-left: 0.4rem solid var(--color-muted);
+  border-top: 0.2rem solid var(--color-muted);
+  border-bottom: 0.2rem solid var(--color-muted);
+  border-right: 0.2rem solid var(--color-muted);
+  margin-bottom: var(--space-3);
 }
 
-.error-summary,.field-error{
-    padding:var(--space-3);
-    border-left:.4rem solid var(--color-alt);
-    background:var(--color-altaccent);
+.error-summary,
+.field-error {
+  padding: var(--space-3);
+  border-left: 0.4rem solid var(--color-alt);
+  background: var(--color-altaccent);
 }
 
 .field-error {
-    margin-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
 }
 
-.field-error input{
-    border-color:var(--color-error);
+.field-error input {
+  border-color: var(--color-error);
 }
 
-:disabled{
-    opacity:.75;
-    cursor:not-allowed;
+:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
 }
 input:disabled {
-    background-color: #b3b3b3;
+  background-color: #b3b3b3;
 }
 
 #discovery {
-    max-width: 34ch;
+  max-width: 34ch;
 }
 
 .test-record-img {
-    width: 100%;
-    max-width: 50vw;
+  width: 100%;
+  max-width: 50vw;
 }
 .table-region {
-    overflow-x:auto;
+  overflow-x: auto;
 }
 table {
-    min-width: 733px;
-    width: 100%;
-    border-collapse: collapse;
+  min-width: 733px;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th {
-    font-weight: var(--font-weight-bold);
-    background-color: #4960ac17;
+  font-weight: var(--font-weight-bold);
+  background-color: #4960ac17;
 }
 
-td, th {
-    border: 0.1rem solid var(--color-muted);
-    padding:.75rem;
+td,
+th {
+  border: 0.1rem solid var(--color-muted);
+  padding: 0.75rem;
 }
 /* Styling valid and invalid entries after user has interacted with element*/
-input:default,  #time:default, select:default textarea:default, input:required {
+input:default,
+#time:default,
+select:default textarea:default,
+input:required {
   background-color: inherit;
 }
-input:user-valid, select:user-valid, #time:user-valid, textarea:user-valid {
+input:user-valid,
+select:user-valid,
+#time:user-valid,
+textarea:user-valid {
   background-color: var(--color-success);
 }
-input:user-invalid, select:user-invalid, #time:user-invalid, textarea:user-invalid {
+input:user-invalid,
+select:user-invalid,
+#time:user-invalid,
+textarea:user-invalid {
   background-color: var(--color-altaccent);
 }
 
-
-@media (min-width:48rem){
-    .paired-fields{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:var(--space-3);
-    }
+@media (min-width: 48rem) {
+  .paired-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
 }
 
 @media screen and (min-width: 500px) {
-    form {
-        padding: var(--space-3);
-    }
-    .card-row {
+  form {
+    padding: var(--space-3);
+  }
+  .card-row {
     padding: var(--padding-cardrow);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
-    }
-    .card {
-        max-width: 350px;
-        padding: var(--space-3);
-    }
+  }
+  .card {
+    max-width: 350px;
+    padding: var(--space-3);
+  }
 }
-
-
